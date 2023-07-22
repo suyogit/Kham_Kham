@@ -42,13 +42,25 @@ const Header = () => {
     )
 }
 
+
+const burgerKing =
+
+{
+    image: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf",
+    name: "Burger King",
+    couiseine: ["Burgers", "Italian"],
+    rating: "4.5",
+}
+
+
+
 const RestaurantCard = () => {
     return (
         <div className="card">
-            <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf" alt="restaurant" />
-            <h2>Burger King</h2>
-            <h2>Burgers, Italian</h2>
-            <h2>4.5 stars</h2>
+            <img src={burgerKing.image} alt="restaurant" />
+            <h2>{burgerKing.name}</h2>
+            <h2>{burgerKing.couiseine.join(" , ")}</h2>
+            <h2>{burgerKing.rating} stars</h2>
         </div>
     )
 }
@@ -59,7 +71,16 @@ const RestaurantCard = () => {
 
 const Body = () => {
     return (
-        <div className="body">
+        <div className="restaurant-list">
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
+            <RestaurantCard />
             <RestaurantCard />
         </div>
     )

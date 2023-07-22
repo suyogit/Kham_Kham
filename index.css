@@ -42,11 +42,11 @@
 
 /* Body CSS */
 
-.body{
+.restaurant-list{
     width: auto;
     display: flex;
     flex-wrap: wrap;
-    /* justify-content:center; */
+    justify-content:center;
 }
 
 
