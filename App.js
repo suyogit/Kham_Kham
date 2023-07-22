@@ -42,10 +42,25 @@ const Header = () => {
     )
 }
 
+const RestaurantCard = () => {
+    return (
+        <div className="card">
+            <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf" alt="restaurant" />
+            <h2>Burger King</h2>
+            <h2>Burgers, Italian</h2>
+            <h2>4.5 stars</h2>
+        </div>
+    )
+}
+
+
+
+
+
 const Body = () => {
     return (
         <div className="body">
-            Body
+            <RestaurantCard />
         </div>
     )
 }
