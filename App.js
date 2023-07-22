@@ -1,23 +1,75 @@
 import React from 'react';
 import ReactDOM, { createRoot } from 'react-dom/client';
 
-
-const title =
+/* My Food App structure will look like this, 
+            1) Header
+                - Logo
+                - Nav Items(right side)
+                - Cart
+            2) Body
+                - Search bar
+                - Restaurants List
+                    - Restaurant card
+                        - Image
+                        - Name
+                        - Rating
+            3) Footer
+                - Links
+                - Copyrights
+       
+*/
+const Title = () =>
     (
-        <h1 id="title" key="h2">
-            Kham Kham
-        </h1>
+    <a href="/">
+        <img className="logo" src="https://wpengine-myanmore.s3.amazonaws.com/uploads/sabai/File/files/l_0061ba35cbab10619bc12c6148509cd1.jpg" alt="logo" />
+    </a>
     );
 
-const HeaderComponent = () => {
+const Header = () => {
     return (
-        <div>
-            {title}
-            <h2>Learning functional component</h2>
-            <h2>This is a h2 tag</h2>
+        <div className="header" >
+            <Title />
+
+            <div className="nav-items" >
+                <ul>
+                    <li>Home</li>
+                    <li>About us</li>
+                    <li>Contact</li>
+                    <li>Cart</li>
+                </ul>
+            </div>
         </div>
     )
 }
 
+const Body = () => {
+    return (
+        <div className="body">
+            Body
+        </div>
+    )
+}
+
+const Footer = () => {
+    return (
+        <div className="footer">
+            Footer
+        </div>
+    )
+}
+
+
+const AppLayout = () => {
+    return (
+        <>
+            <Header />
+            <Body />
+            <Footer />
+        </>
+    )
+}
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<HeaderComponent />);
+root.render(<AppLayout />);
+// root.render(HeaderComponent())
