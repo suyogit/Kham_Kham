@@ -1872,11 +1872,11 @@ const RestaurantCard = ({ name, cuisines, lastMileTravel, cloudinaryImageId }) =
 
     return (
         <div className="card">
-            {/* <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" + cloudinaryImageId} alt="restaurant" /> */}
+            <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" + cloudinaryImageId} alt="restaurant" />
             <h2>{name}</h2>
             <h3>{cuisines.join(" , ")}</h3>
 
-            {/* <h4>{lastMileTravel} minutes</h4>  */}
+            <h4>{lastMileTravel} minutes</h4> 
         </div>
     )
 }
@@ -1888,16 +1888,18 @@ const RestaurantCard = ({ name, cuisines, lastMileTravel, cloudinaryImageId }) =
 const Body = () => {
     return (
         <div className="restaurant-list">
-            <RestaurantCard name={restaurantList[0].data.name} cuisines={restaurantList[0].data.cuisines} />
-            <RestaurantCard name={restaurantList[1].data.name} cuisines={restaurantList[1].data.cuisines} />
-            {/* <RestaurantCard restaurant={restaurantList[2]} />
-            <RestaurantCard restaurant={restaurantList[3]} />
-            <RestaurantCard restaurant={restaurantList[4]} />
-            <RestaurantCard restaurant={restaurantList[5]} />
-            <RestaurantCard restaurant={restaurantList[7]} />
-            <RestaurantCard restaurant={restaurantList[8]} />
-            <RestaurantCard restaurant={restaurantList[9]} />
-            <RestaurantCard restaurant={restaurantList[10]} /> */}
+            <RestaurantCard {...restaurantList[0].data} />
+            <RestaurantCard {...restaurantList[1].data} />
+            <RestaurantCard {...restaurantList[2].data} />
+            <RestaurantCard {...restaurantList[3].data} />
+            <RestaurantCard {...restaurantList[4].data} />
+            <RestaurantCard {...restaurantList[5].data} />
+            <RestaurantCard {...restaurantList[6].data} />
+            <RestaurantCard {...restaurantList[7].data} />
+            <RestaurantCard {...restaurantList[8].data} />
+            <RestaurantCard {...restaurantList[9].data} />
+
+
 
 
 
