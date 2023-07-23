@@ -1888,18 +1888,11 @@ const RestaurantCard = ({ name, cuisines, lastMileTravel, cloudinaryImageId }) =
 const Body = () => {
     return (
         <div className="restaurant-list">
-            <RestaurantCard {...restaurantList[0].data} />
-            <RestaurantCard {...restaurantList[1].data} />
-            <RestaurantCard {...restaurantList[2].data} />
-            <RestaurantCard {...restaurantList[3].data} />
-            <RestaurantCard {...restaurantList[4].data} />
-            <RestaurantCard {...restaurantList[5].data} />
-            <RestaurantCard {...restaurantList[6].data} />
-            <RestaurantCard {...restaurantList[7].data} />
-            <RestaurantCard {...restaurantList[8].data} />
-            <RestaurantCard {...restaurantList[9].data} />
-
-
+            {
+                restaurantList.map((x) => {
+                    return <RestaurantCard {...x.data} />
+                })
+            }
 
 
 
