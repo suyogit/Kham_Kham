@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom"
 //import Logo from "../assets/image/logoimage.png";
 
 
@@ -20,9 +21,13 @@ const Header = () => {
 
             <div className="nav-items" >
                 <ul>
-                    <li>Home</li>
-                    <li>About us</li>
-                    <li>Contact</li>
+                    <li><Link to="/">
+                        Home
+                    </Link></li>
+                    <li><Link to="/about">
+                        About us
+                    </Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
                     <li>Cart</li>
                     <li>
                         {/* use conditional rendering for login and logout */}
