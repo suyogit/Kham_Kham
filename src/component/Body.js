@@ -1,8 +1,9 @@
 
-import { restaurantList } from "../../constant";
+
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import { swiggy_api_url } from "../../constant";
+import Shimmer from "./Shimmer";
 
 
 // function filterData(searchText, restaurants) {
@@ -17,14 +18,14 @@ import { swiggy_api_url } from "../../constant";
 function filterData(searchText, restaurants) {
     const lowerCaseSearchText = searchText.toLowerCase();
     const filteredData = restaurants.filter((item) =>
-        item.data.name.toLowerCase().includes(lowerCaseSearchText)
+        item?.data?.name?.toLowerCase()?.includes(lowerCaseSearchText)
     );
     return filteredData;
 }
 
 
 const Body = () => {
-    const [restaurants, setRestaurants] = useState(restaurantList);
+    const [restaurants, setRestaurants] = useState([]);
     const [searchText, setSearchText] = useState("");
 
     useEffect(() => {
@@ -41,10 +42,7 @@ const Body = () => {
     }
 
 
-
-
-
-    return (
+    return (restaurants.length === 0) ? <Shimmer /> : (
         <>
             <div className="search-container">
                 <input
