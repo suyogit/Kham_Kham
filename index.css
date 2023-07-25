@@ -1,8 +1,20 @@
+/* Select all CSS */
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
 
-*{
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+/* create global variable with :root selector */
+:root {
+  --header-bg-color: rgb(1, 163, 144);
+  --footer-bg-color: rgb(1, 163, 144);
+  --text-color: #000;
+  --light-green: #00ad1d;
+  --dark-green: #016034;
+  --orange: #d97919;
+  --light-red: rgb(236, 56, 56);
 }
 
 /* Header CSS */
@@ -39,6 +51,33 @@
     font-size: large;
     cursor: pointer;
 }
+
+
+.nav-items > ul > li .logout-btn,
+.nav-items > ul > li .login-btn {
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  margin-right: 15px;
+}
+
+.nav-items > ul > li .logout-btn {
+  background-color: var(--orange);
+}
+
+.nav-items > ul > li .login-btn {
+  background-color: var(--light-red);
+}
+
+.nav-items > ul > li .logout-btn:hover,
+.nav-items > ul > li .login-btn:hover {
+  background-color: var(--dark-green);
+}
+
+
 
 /* Body CSS */
 
@@ -155,3 +194,48 @@
     }
   }
   
+/* error message css */
+.error-container {
+  text-align: center;
+  font-size: large;
+  margin: 20px 0;
+}
+
+  
+/* CSS for mobile devices */
+@media only screen and (max-width: 470px) {
+  .header {
+    height: 60px;
+  }
+  .header .logo {
+    width: 80px;
+  }
+  .nav-items > ul > li {
+    font-size: small;
+  }
+  .nav-items > ul > li .logout-btn,
+  .nav-items > ul > li .login-btn {
+    font-size: xx-small;
+  }
+  .search-container {
+    margin: 80px auto 0px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .header {
+    height: 50px;
+  }
+  .header .logo {
+    width: 70px;
+  }
+  .nav-items > ul > li {
+    font-size: x-small;
+  }
+  .nav-items > ul > li .logout-btn,
+  .nav-items > ul > li .login-btn {
+    padding: 5px;
+  }
+  .search-container {
+    margin: 70px auto 0px;
+  }
+}

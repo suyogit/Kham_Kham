@@ -1,3 +1,4 @@
+import { useState } from "react";
 const Title = () =>
 (
     <a href="/">
@@ -6,6 +7,10 @@ const Title = () =>
 );
 
 const Header = () => {
+
+    // use useState for user logged in or logged out
+    const [isLoggedin, setIsLoggedin] = useState(true);
+
     return (
         <div className="header" >
             <Title />
@@ -16,6 +21,21 @@ const Header = () => {
                     <li>About us</li>
                     <li>Contact</li>
                     <li>Cart</li>
+                    <li>
+                        {/* use conditional rendering for login and logout */}
+                        {isLoggedin ? (
+                            <button
+                                className="logout-btn"
+                                onClick={() => setIsLoggedin(false)}
+                            >
+                                Logout
+                            </button>
+                        ) : (
+                            <button className="login-btn" onClick={() => setIsLoggedin(true)}>
+                                Login
+                            </button>
+                        )}
+                    </li>
                 </ul>
             </div>
         </div>
