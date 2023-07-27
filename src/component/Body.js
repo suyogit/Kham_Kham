@@ -4,11 +4,14 @@ import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react"; /* This is named export */
 import Shimmer from "./Shimmer"; /* This is default export */
 import { swiggy_api_url } from "../../constant";
+import { Link } from "react-router-dom"
 
 // Filter the restaurant data according input type
 function filterData(searchText, restaurants) {
     const filterData = restaurants.filter((restaurant) =>
-        restaurant?.info?.name.toLowerCase().includes(searchText.toLowerCase())
+
+        restaurant?.data?.name.toLowerCase().includes(searchText.toLowerCase())
+    //     restaurant?.info?.name.toLowerCase().includes(searchText.toLowerCase())
     );
     return filterData;
 }
@@ -32,13 +35,13 @@ const Body = () => {
         try {
             const data = await fetch(swiggy_api_url);
             const json = await data.json();
-            // updated state variable restaurants with Swiggy API data
-            // setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-            // setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-            // console.log(json?.data?.cards[2]?.data?.data?.cards)
+           // updated state variable restaurants with Swiggy API data
+            setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+            setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+        //    console.log(json?.data?.cards[2]?.data?.data?.cards)
 
-            setAllRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-            setFilteredRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+            // setAllRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+            // setFilteredRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
          //   console.log(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants[0])
         } catch (error) {
             console.log(error);
@@ -94,8 +97,10 @@ const Body = () => {
                         {/* We are mapping restaurants array and passing JSON array data to RestaurantCard component as props with unique key as restaurant.data.id */}
                         {filteredRestaurants.map((restaurant) => {
                             return (
-                                // <RestaurantCard key={restaurant.data.id} {...restaurant.data} />
-                                <RestaurantCard key={restaurant.info.id} {...restaurant.info} />
+                                <Link to={`/restaurant/${restaurant.data.id}`} key={restaurant.data.id}>
+                                    <RestaurantCard  {...restaurant.data} />
+                                </Link>
+                             //   <RestaurantCard key={restaurant.info.id} {...restaurant.info} />
                             );
                         })}
                     </div>
