@@ -1,4 +1,6 @@
-import { Outlet } from "react-router-dom";
+//import { Outlet } from "react-router-dom";
+import Profile from "./Profile"
+import ProfileClass from "./ProfileClass";
 const About = () => {
     return (
         <div className="about-container">
@@ -13,7 +15,9 @@ const About = () => {
             <div className="about-right">
                 <img src="" alt="Food Image" />
             </div>
-            <Outlet />
+            {/* <Outlet /> */}
+            <Profile name={"suyog funcitonal"} />
+            <ProfileClass name={"suyyoog class"} />
         </div>
     );
 };

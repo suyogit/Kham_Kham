@@ -1,9 +1,11 @@
 import React from 'react'
 
-const Profile = () => {
+const Profile = (props) => {
     return (
         <>
         <div>Profile</div>
+            <div>{props.name}</div>
+
 
         </>
     )
