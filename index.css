@@ -35,7 +35,7 @@
     padding-left: 10px;
     width: 100px;
 }
-
+/* 
 .nav-items{   
     padding: 0 10px 0;
     width: auto;
@@ -75,7 +75,39 @@
 .nav-items > ul > li .logout-btn:hover,
 .nav-items > ul > li .login-btn:hover {
   background-color: var(--dark-green);
+} */
+
+/* nav items CSS start*/
+.nav-items > ul {
+  list-style-type: none;
+  display: flex;
+  margin-right: 30px;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.nav-items > ul > li {
+  padding: 10px;
+}
+
+.nav-items > ul > li:hover {
+  background-color: var(--orange);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-items > ul > li .logout-btn,
+.nav-items > ul > li .login-btn {
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  background-color: Transparent;
+  font-size: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* nav items CSS End*/
 
 
 
@@ -219,6 +251,7 @@
   padding: 10px;
   margin: 20px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .card:hover {
@@ -232,6 +265,7 @@
 
 .card > h5 {
   font-weight: lighter;
+  text-decoration: none;
 }
 
 .card > span {
@@ -239,6 +273,7 @@
   justify-content: space-between;
   margin-top: 8px;
   text-align: center;
+  text-decoration: none;
 }
 
 .card > span > h4 {
@@ -246,6 +281,7 @@
   font-size: 12px;
   padding: 0 2px 0;
   margin-top: 10px;
+  text-decoration: none;
 }
 
 .card > span > h4:first-child {
@@ -256,6 +292,7 @@
   color: white;
   padding: 5px;
   margin-top: 5px;
+  text-decoration: none;
 }
 
 .card > span > h4:first-child .fa-star {
@@ -264,6 +301,218 @@
 }
 
 /* Restaurant cards CSS End*/
+
+
+/* Login page CSS Start */
+.login-container {
+  width: 380px;
+  margin: 40px auto 0;
+}
+
+.login-form {
+  position: relative;
+  z-index: 1;
+  background: var(--light-orange);
+  border-radius: 10px;
+  max-width: 380px;
+  padding: 25px 40px;
+  text-align: center;
+}
+
+.login-form input {
+  outline: 0;
+  background: var(--input-bg);
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.login-form input:focus {
+  background: var(--input-bg-focus);
+}
+
+.login-form button {
+  text-transform: uppercase;
+  outline: 0;
+  background: #4b6cb7;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.login-form button:active {
+  background: #395591;
+}
+
+.login-form span {
+  font-size: 40px;
+  color: #4b6cb7;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.login-form p.error {
+  margin: 0 0 10px 10px;
+  text-align: left;
+  font-size: 13px;
+  color: red;
+}
+/* Login page CSS End */
+
+
+/* About us page CSS Start */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 100px auto 0px;
+  justify-content: center;
+  align-items: center;
+  height: 72vh;
+}
+.about-container .about-left {
+  padding-left: 10px;
+}
+.about-container .about-left h1 {
+  font-size: 70px;
+}
+.about-container .about-left h1 span {
+  background-color: var(--orange);
+  padding: 0 10px;
+  border-radius: 15px;
+  color: var(--white);
+}
+.about-container .about-left h4 {
+  font-size: 25px;
+  padding-top: 10px;
+  font-style: italic;
+}
+.about-container .about-left h4 span {
+  color: var(--dark-orange);
+}
+.about-container .about-right {
+  padding-left: 20px;
+}
+.about-container .about-right img {
+  width: 500px;
+  padding-right: 70px;
+}
+
+/* About us page CSS End */
+
+/* Contact us page CSS Start */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 100px auto 30px;
+  justify-content: space-evenly;
+  overflow-y: hidden;
+}
+
+.contact-container .contact-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+}
+
+.contact-container .contact-right form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.contact-container .contact-right form input {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  border: 2px solid #aabcca;
+  width: 50vh;
+}
+
+.contact-container .contact-right form textarea {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  border: 2px solid #aabcca;
+  width: 50vh;
+}
+
+.contact-container .contact-right form button {
+  padding: 10px 15px;
+  margin: 10px;
+  background-color: var(--light-blue);
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  color: #cf4949;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-container .contact-right form button:hover {
+  background-color: var(--dark-green);
+}
+
+/* Contact us page CSS End */
+
+
+/* footer CSS Start*/
+.footer {
+  margin: 10px;
+  width: auto;
+  text-align: center;
+  background-color: var(--footer-bg-color);
+  padding: 20px 10px 20px;
+  border-radius: 5px;
+  box-shadow: -1px 4px 20px 14px rgba(0, 0, 0, 0.2);
+}
+
+.footer > i {
+  padding: 0 5px 0;
+  font-size: smaller;
+}
+
+.footer > a {
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.footer > a:hover {
+  color: var(--x-dark-orange);
+}
+
+.fa-heart {
+  color: darkred;
+}
+
+.footer > strong {
+  padding-left: 5px;
+}
+
+.footer > strong > span {
+  color: var(--x-dark-orange);
+}
+
+/* footer CSS End*/
+
+
 
 /* Restaurant Menu CSS Start */
 .restaurant-menu {
