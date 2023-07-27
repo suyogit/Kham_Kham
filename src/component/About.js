@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 const About = () => {
     return (
         <div className="about-container">
@@ -12,6 +13,7 @@ const About = () => {
             <div className="about-right">
                 <img src="" alt="Food Image" />
             </div>
+            <Outlet />
         </div>
     );
 };

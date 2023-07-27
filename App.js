@@ -31,20 +31,25 @@ const appRouter = createBrowserRouter([
         errorElement: <Error />, // show error component for path is different
         children: [
             // show children component for routing
+
+            {
+                path: "/about",
+                element: <About />,
+                children: [
+                    {
+                        path: "profile",
+                        element: <Profile />,
+
+                    },
+                ]
+            },
+
             {
                 path: "/",
                 element: <Body />,
             },
-            {
-                path: "/about",
-                element: <About />,
 
-            },
-            {
-                path: "/about/profile",
-                element: <Profile />,
 
-            },
 
 
             {
