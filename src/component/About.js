@@ -6,7 +6,7 @@ const About = () => {
                     Welcome to <br /> The world of <br /> <span>Tasty & Fresh Food</span>
                 </h1>
                 <h4>
-                    "Better you will feel if you eat a Food<span>Fire</span> healthy meal"
+                    "Better you will feel if you eat a Kham<span>Kham</span> healthy meal"
                 </h4>
         </div>
             <div className="about-right">

@@ -9,7 +9,7 @@ import Error from './src/component/Error';
 import Contact from './src/component/Contact';
 import RestrauntMenu from './src/component/RestrauntMenu';
 import Login from './src/component/Login';
-
+import Profile from './src/component/Profile';
 
 const AppLayout = () => {
 
@@ -38,7 +38,15 @@ const appRouter = createBrowserRouter([
             {
                 path: "/about",
                 element: <About />,
+
             },
+            {
+                path: "/about/profile",
+                element: <Profile />,
+
+            },
+
+
             {
                 path: "/contact",
                 element: <Contact />,
