@@ -32,12 +32,12 @@ export default class ProfileClass extends Component {
     }
 
     componentDidUpdate() {
-        console.log("componentDidUpdate child")
+        console.log("componentDidUpdate child" + this.props.name)
 
     }
 
     componentWillUnmount() {
-        console.log("componentWillUnmount child")
+        console.log("componentWillUnmount child" + this.props.name)
     }
 
 
