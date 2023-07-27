@@ -12,6 +12,9 @@ import Login from './src/component/Login';
 
 
 const AppLayout = () => {
+
+
+
     return (
         <>
             <Header />
@@ -53,12 +56,6 @@ const appRouter = createBrowserRouter([
     },
 
 ]);
-
-
-
-
-
-
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

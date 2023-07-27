@@ -11,14 +11,11 @@ const Title = () =>
         <img className="logo" src="https://wpengine-myanmore.s3.amazonaws.com/uploads/sabai/File/files/l_0061ba35cbab10619bc12c6148509cd1.jpg" alt="logo" />
     </a>
 );
-
+// Header component for header section: Logo, Nav Items
 const Header = () => {
-
     // use useState for user logged in or logged out
     const [isLoggedin, setIsLoggedin] = useState(true);
-    //   const [loginout, setLoginout] = useState("Logout");
     const navigate = useNavigate();
-
     return (
         <div className="header">
             <Title />
@@ -42,27 +39,20 @@ const Header = () => {
                         {isLoggedin ? (
                             <button
                                 className="logout-btn"
-                                onClick={() =>
-
-                                    setIsLoggedin(false)
-                                }
+                                onClick={() => setIsLoggedin(false)}
                             >
                                 Logout
                             </button>
                         ) : (
-                                <button className="login-btn" onClick={() =>
-
-                                    navigate("/login")
-                                }>
-
-                                    Login
+                            <button className="login-btn" onClick={() => navigate("/login")}>
+                                Login
                             </button>
                         )}
                     </li>
                 </ul>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default Header;
