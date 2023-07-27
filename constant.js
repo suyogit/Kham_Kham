@@ -22,6 +22,27 @@ export const ITEM_IMG_CDN_URL =
 export const shimmer_menu_card_unit = 4;
 
 
+// Github - username
+export const Github_UserName = "suyogit";
+export const Github_Repository_Name = "kham_kham";
+
+// Github API for User
+export const Github_API_User = "https://api.github.com/users/";
+
+// Social Media Links
+export const Linkedin_Link = "https://www.linkedin.com/in/suyog-acharya-82552b1b2/";
+export const Twitter_Link = "https://twitter.com/suyogacharya15";
+export const Github_Link = "https://github.com/suyogit";
+export const Email_Link = "mailto:asuyog042@gmail.com";
+
+// Github Authorization Token
+export const options = {
+    method: "GET",
+    headers: {
+        Authorization: "",
+    },
+};
+
 // // 20230727060823
 // // https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING
 
@@ -645,7 +666,7 @@ export const shimmer_menu_card_unit = 4;
 //                     "title": "Offers Near You",
 //                     "subtitle": "0 OPTIONS",
 //                     "restaurants": [
-                      
+
 //                     ],
 //                     "totalCount": 0,
 //                     "dwebOpenFilterTitle": "Offers Near You",
@@ -668,7 +689,7 @@ export const shimmer_menu_card_unit = 4;
 //                     "title": "Veg Only",
 //                     "subtitle": "0 OPTIONS",
 //                     "restaurants": [
-                      
+
 //                     ],
 //                     "totalCount": 0,
 //                     "dwebOpenFilterTitle": "Vegetarian Options",
@@ -708,7 +729,7 @@ export const shimmer_menu_card_unit = 4;
 //                       "Ice Cream Cakes"
 //                     ],
 //                     "tags": [
-                      
+
 //                     ],
 //                     "costForTwo": 30000,
 //                     "costForTwoString": "₹300 FOR TWO",
@@ -730,7 +751,7 @@ export const shimmer_menu_card_unit = 4;
 //                     "select": false,
 //                     "favorite": false,
 //                     "tradeCampaignHeaders": [
-                      
+
 //                     ],
 //                     "ribbon": [
 //                       {
@@ -738,7 +759,7 @@ export const shimmer_menu_card_unit = 4;
 //                       }
 //                     ],
 //                     "chain": [
-                      
+
 //                     ],
 //                     "feeDetails": {
 //                       "fees": [
@@ -776,13 +797,13 @@ export const shimmer_menu_card_unit = 4;
 //                     "adTrackingID": "cid=7545519~p=1~eid=00000189-94ba-7acf-0878-f03f00430113~srvts=1690417396431",
 //                     "badges": {
 //                       "imageBased": [
-                        
+
 //                       ],
 //                       "textBased": [
-                        
+
 //                       ],
 //                       "textExtendedBadges": [
-                        
+
 //                       ]
 //                     },
 //                     "lastMileTravelString": "3 kms",
@@ -830,7 +851,7 @@ export const shimmer_menu_card_unit = 4;
 //                       "Biryani"
 //                     ],
 //                     "tags": [
-                      
+
 //                     ],
 //                     "costForTwo": 15000,
 //                     "costForTwoString": "₹150 FOR TWO",
@@ -852,10 +873,10 @@ export const shimmer_menu_card_unit = 4;
 //                     "select": false,
 //                     "favorite": false,
 //                     "tradeCampaignHeaders": [
-                      
+
 //                     ],
 //                     "chain": [
-                      
+
 //                     ],
 //                     "feeDetails": {
 //                       "fees": [
@@ -893,13 +914,13 @@ export const shimmer_menu_card_unit = 4;
 //                     "adTrackingID": "",
 //                     "badges": {
 //                       "imageBased": [
-                        
+
 //                       ],
 //                       "textBased": [
-                        
+
 //                       ],
 //                       "textExtendedBadges": [
-                        
+
 //                       ]
 //                     },
 //                     "lastMileTravelString": "4 kms",
@@ -951,7 +972,7 @@ export const shimmer_menu_card_unit = 4;
 //                       "Kerala"
 //                     ],
 //                     "tags": [
-                      
+
 //                     ],
 //                     "costForTwo": 45000,
 //                     "costForTwoString": "₹450 FOR TWO",
@@ -973,10 +994,10 @@ export const shimmer_menu_card_unit = 4;
 //                     "select": false,
 //                     "favorite": false,
 //                     "tradeCampaignHeaders": [
-                      
+
 //                     ],
 //                     "chain": [
-                      
+
 //                     ],
 //                     "feeDetails": {
 //                       "fees": [
@@ -1014,13 +1035,13 @@ export const shimmer_menu_card_unit = 4;
 //                     "adTrackingID": "",
 //                     "badges": {
 //                       "imageBased": [
-                        
+
 //                       ],
 //                       "textBased": [
-                        
+
 //                       ],
 //                       "textExtendedBadges": [
-                        
+
 //                       ]
 //                     },
 //                     "lastMileTravelString": "2 kms",
@@ -1067,7 +1088,7 @@ export const shimmer_menu_card_unit = 4;
 //                       "Chinese"
 //                     ],
 //                     "tags": [
-                      
+
 //                     ],
 //                     "costForTwo": 40000,
 //                     "costForTwoString": "₹400 FOR TWO",
@@ -1089,10 +1110,10 @@ export const shimmer_menu_card_unit = 4;
 //                     "select": false,
 //                     "favorite": false,
 //                     "tradeCampaignHeaders": [
-                      
+
 //                     ],
 //                     "chain": [
-                      
+
 //                     ],
 //                     "feeDetails": {
 //                       "fees": [
@@ -1130,13 +1151,13 @@ export const shimmer_menu_card_unit = 4;
 //                     "adTrackingID": "",
 //                     "badges": {
 //                       "imageBased": [
-                        
+
 //                       ],
 //                       "textBased": [
-                        
+
 //                       ],
 //                       "textExtendedBadges": [
-                        
+
 //                       ]
 //                     },
 //                     "lastMileTravelString": "4 kms",
@@ -1185,7 +1206,7 @@ export const shimmer_menu_card_unit = 4;
 //                       "Snacks"
 //                     ],
 //                     "tags": [
-                      
+
 //                     ],
 //                     "costForTwo": 25000,
 //                     "costForTwoString": "₹250 FOR TWO",
@@ -1207,10 +1228,10 @@ export const shimmer_menu_card_unit = 4;
 //                     "select": false,
 //                     "favorite": false,
 //                     "tradeCampaignHeaders": [
-                      
+
 //                     ],
 //                     "chain": [
-                      
+
 //                     ],
 //                     "feeDetails": {
 //                       "fees": [
@@ -1248,13 +1269,13 @@ export const shimmer_menu_card_unit = 4;
 //                     "adTrackingID": "",
 //                     "badges": {
 //                       "imageBased": [
-                        
+
 //                       ],
 //                       "textBased": [
-                        
+
 //                       ],
 //                       "textExtendedBadges": [
-                        
+
 //                       ]
 //                     },
 //                     "lastMileTravelString": "2.7 kms",
@@ -1303,7 +1324,7 @@ export const shimmer_menu_card_unit = 4;
 //                       "Chaat"
 //                     ],
 //                     "tags": [
-                      
+
 //                     ],
 //                     "costForTwo": 30000,
 //                     "costForTwoString": "₹300 FOR TWO",
@@ -1325,10 +1346,10 @@ export const shimmer_menu_card_unit = 4;
 //                     "select": false,
 //                     "favorite": false,
 //                     "tradeCampaignHeaders": [
-                      
+
 //                     ],
 //                     "chain": [
-                      
+
 //                     ],
 //                     "feeDetails": {
 //                       "fees": [
@@ -1366,13 +1387,13 @@ export const shimmer_menu_card_unit = 4;
 //                     "adTrackingID": "",
 //                     "badges": {
 //                       "imageBased": [
-                        
+
 //                       ],
 //                       "textBased": [
-                        
+
 //                       ],
 //                       "textExtendedBadges": [
-                        
+
 //                       ]
 //                     },
 //                     "lastMileTravelString": "5 kms",
@@ -1418,7 +1439,7 @@ export const shimmer_menu_card_unit = 4;
 //                       "Biryani"
 //                     ],
 //                     "tags": [
-                      
+
 //                     ],
 //                     "costForTwo": 25000,
 //                     "costForTwoString": "₹250 FOR TWO",
@@ -1440,10 +1461,10 @@ export const shimmer_menu_card_unit = 4;
 //                     "select": false,
 //                     "favorite": false,
 //                     "tradeCampaignHeaders": [
-                      
+
 //                     ],
 //                     "chain": [
-                      
+
 //                     ],
 //                     "feeDetails": {
 //                       "fees": [
@@ -1481,13 +1502,13 @@ export const shimmer_menu_card_unit = 4;
 //                     "adTrackingID": "",
 //                     "badges": {
 //                       "imageBased": [
-                        
+
 //                       ],
 //                       "textBased": [
-                        
+
 //                       ],
 //                       "textExtendedBadges": [
-                        
+
 //                       ]
 //                     },
 //                     "lastMileTravelString": "6.6 kms",
@@ -1543,7 +1564,7 @@ export const shimmer_menu_card_unit = 4;
 //                       "Salads"
 //                     ],
 //                     "tags": [
-                      
+
 //                     ],
 //                     "costForTwo": 30000,
 //                     "costForTwoString": "₹300 FOR TWO",
@@ -1565,10 +1586,10 @@ export const shimmer_menu_card_unit = 4;
 //                     "select": false,
 //                     "favorite": false,
 //                     "tradeCampaignHeaders": [
-                      
+
 //                     ],
 //                     "chain": [
-                      
+
 //                     ],
 //                     "feeDetails": {
 //                       "fees": [
@@ -1606,13 +1627,13 @@ export const shimmer_menu_card_unit = 4;
 //                     "adTrackingID": "",
 //                     "badges": {
 //                       "imageBased": [
-                        
+
 //                       ],
 //                       "textBased": [
-                        
+
 //                       ],
 //                       "textExtendedBadges": [
-                        
+
 //                       ]
 //                     },
 //                     "lastMileTravelString": "4.1 kms",
@@ -1659,7 +1680,7 @@ export const shimmer_menu_card_unit = 4;
 //                       "Mughlai"
 //                     ],
 //                     "tags": [
-                      
+
 //                     ],
 //                     "costForTwo": 30000,
 //                     "costForTwoString": "₹300 FOR TWO",
@@ -1681,10 +1702,10 @@ export const shimmer_menu_card_unit = 4;
 //                     "select": false,
 //                     "favorite": false,
 //                     "tradeCampaignHeaders": [
-                      
+
 //                     ],
 //                     "chain": [
-                      
+
 //                     ],
 //                     "feeDetails": {
 //                       "fees": [
@@ -1722,13 +1743,13 @@ export const shimmer_menu_card_unit = 4;
 //                     "adTrackingID": "",
 //                     "badges": {
 //                       "imageBased": [
-                        
+
 //                       ],
 //                       "textBased": [
-                        
+
 //                       ],
 //                       "textExtendedBadges": [
-                        
+
 //                       ]
 //                     },
 //                     "lastMileTravelString": "6.6 kms",
@@ -1776,7 +1797,7 @@ export const shimmer_menu_card_unit = 4;
 //                       "Kebabs"
 //                     ],
 //                     "tags": [
-                      
+
 //                     ],
 //                     "costForTwo": 39900,
 //                     "costForTwoString": "₹399 FOR TWO",
@@ -1798,10 +1819,10 @@ export const shimmer_menu_card_unit = 4;
 //                     "select": false,
 //                     "favorite": false,
 //                     "tradeCampaignHeaders": [
-                      
+
 //                     ],
 //                     "chain": [
-                      
+
 //                     ],
 //                     "feeDetails": {
 //                       "fees": [
@@ -1839,13 +1860,13 @@ export const shimmer_menu_card_unit = 4;
 //                     "adTrackingID": "",
 //                     "badges": {
 //                       "imageBased": [
-                        
+
 //                       ],
 //                       "textBased": [
-                        
+
 //                       ],
 //                       "textExtendedBadges": [
-                        
+
 //                       ]
 //                     },
 //                     "lastMileTravelString": "4.6 kms",
@@ -1887,7 +1908,7 @@ export const shimmer_menu_card_unit = 4;
 //                       "Beverages"
 //                     ],
 //                     "tags": [
-                      
+
 //                     ],
 //                     "costForTwo": 30000,
 //                     "costForTwoString": "₹300 FOR TWO",
@@ -1909,10 +1930,10 @@ export const shimmer_menu_card_unit = 4;
 //                     "select": false,
 //                     "favorite": false,
 //                     "tradeCampaignHeaders": [
-                      
+
 //                     ],
 //                     "chain": [
-                      
+
 //                     ],
 //                     "feeDetails": {
 //                       "fees": [
@@ -1950,13 +1971,13 @@ export const shimmer_menu_card_unit = 4;
 //                     "adTrackingID": "",
 //                     "badges": {
 //                       "imageBased": [
-                        
+
 //                       ],
 //                       "textBased": [
-                        
+
 //                       ],
 //                       "textExtendedBadges": [
-                        
+
 //                       ]
 //                     },
 //                     "lastMileTravelString": "8.3 kms",
@@ -1998,7 +2019,7 @@ export const shimmer_menu_card_unit = 4;
 //                       "Arabian"
 //                     ],
 //                     "tags": [
-                      
+
 //                     ],
 //                     "costForTwo": 15000,
 //                     "costForTwoString": "₹150 FOR TWO",
@@ -2020,10 +2041,10 @@ export const shimmer_menu_card_unit = 4;
 //                     "select": false,
 //                     "favorite": false,
 //                     "tradeCampaignHeaders": [
-                      
+
 //                     ],
 //                     "chain": [
-                      
+
 //                     ],
 //                     "feeDetails": {
 //                       "fees": [
@@ -2061,13 +2082,13 @@ export const shimmer_menu_card_unit = 4;
 //                     "adTrackingID": "",
 //                     "badges": {
 //                       "imageBased": [
-                        
+
 //                       ],
 //                       "textBased": [
-                        
+
 //                       ],
 //                       "textExtendedBadges": [
-                        
+
 //                       ]
 //                     },
 //                     "lastMileTravelString": "2 kms",
@@ -2117,7 +2138,7 @@ export const shimmer_menu_card_unit = 4;
 //                       "Snacks"
 //                     ],
 //                     "tags": [
-                      
+
 //                     ],
 //                     "costForTwo": 20000,
 //                     "costForTwoString": "₹200 FOR TWO",
@@ -2139,10 +2160,10 @@ export const shimmer_menu_card_unit = 4;
 //                     "select": false,
 //                     "favorite": false,
 //                     "tradeCampaignHeaders": [
-                      
+
 //                     ],
 //                     "chain": [
-                      
+
 //                     ],
 //                     "feeDetails": {
 //                       "fees": [
@@ -2180,13 +2201,13 @@ export const shimmer_menu_card_unit = 4;
 //                     "adTrackingID": "",
 //                     "badges": {
 //                       "imageBased": [
-                        
+
 //                       ],
 //                       "textBased": [
-                        
+
 //                       ],
 //                       "textExtendedBadges": [
-                        
+
 //                       ]
 //                     },
 //                     "lastMileTravelString": "3.9 kms",
@@ -2234,7 +2255,7 @@ export const shimmer_menu_card_unit = 4;
 //                       "Snacks"
 //                     ],
 //                     "tags": [
-                      
+
 //                     ],
 //                     "costForTwo": 25000,
 //                     "costForTwoString": "₹250 FOR TWO",
@@ -2256,10 +2277,10 @@ export const shimmer_menu_card_unit = 4;
 //                     "select": false,
 //                     "favorite": false,
 //                     "tradeCampaignHeaders": [
-                      
+
 //                     ],
 //                     "chain": [
-                      
+
 //                     ],
 //                     "feeDetails": {
 //                       "fees": [
@@ -2297,13 +2318,13 @@ export const shimmer_menu_card_unit = 4;
 //                     "adTrackingID": "",
 //                     "badges": {
 //                       "imageBased": [
-                        
+
 //                       ],
 //                       "textBased": [
-                        
+
 //                       ],
 //                       "textExtendedBadges": [
-                        
+
 //                       ]
 //                     },
 //                     "lastMileTravelString": "4 kms",
@@ -2353,7 +2374,7 @@ export const shimmer_menu_card_unit = 4;
 //                       "Beverages"
 //                     ],
 //                     "tags": [
-                      
+
 //                     ],
 //                     "costForTwo": 45000,
 //                     "costForTwoString": "₹450 FOR TWO",
@@ -2375,10 +2396,10 @@ export const shimmer_menu_card_unit = 4;
 //                     "select": false,
 //                     "favorite": false,
 //                     "tradeCampaignHeaders": [
-                      
+
 //                     ],
 //                     "chain": [
-                      
+
 //                     ],
 //                     "feeDetails": {
 //                       "fees": [
@@ -2416,13 +2437,13 @@ export const shimmer_menu_card_unit = 4;
 //                     "adTrackingID": "",
 //                     "badges": {
 //                       "imageBased": [
-                        
+
 //                       ],
 //                       "textBased": [
-                        
+
 //                       ],
 //                       "textExtendedBadges": [
-                        
+
 //                       ]
 //                     },
 //                     "lastMileTravelString": "2.7 kms",
@@ -2466,5 +2487,5 @@ export const shimmer_menu_card_unit = 4;
 //     "tid": "de014322-47c6-4e21-8d0c-ae4f9688f3fa",
 //     "sid": "8ete3954-3626-4b8b-ad4c-e1df0d3efc95",
 //     "deviceId": "2d3dfa3b-1a5b-e994-87aa-a7a069e391c8",
-//     "csrfToken": "hVH9Rf4YXnPc-sWuvB0AK7nDrUFslP6drktA3Zlw"
-//   }
+//     "csrfToken": "hVH9Rf4YXnPc-sWuvB0AK7nDrUFslP6drktA3Zlw",
+// }

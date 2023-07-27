@@ -63,7 +63,7 @@ export default class About extends Component {
             {/* <Outlet /> */}
 
             <ProfileClass name={"suyyoog 1st class"} />
-            <ProfileClass name={"suyyoog 2nd class"} />
+
         </div>
         )
     }
