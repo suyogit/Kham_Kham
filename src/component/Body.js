@@ -6,6 +6,10 @@ import Shimmer from "./Shimmer"; /* This is default export */
 import { swiggy_api_url } from "../../constant";
 import { Link } from "react-router-dom"
 import { filterData } from "../utils/helper";
+
+import useOnline from "../utils/useOnline";
+
+
 // Body Component for body section: It contain all restaurant cards
 const Body = () => {
     // useState: To create a state variable, searchText, allRestaurants and filteredRestaurants is local state variable
@@ -59,6 +63,16 @@ const Body = () => {
             setFilteredRestaurants(allRestaurants);
     }
     };
+
+
+    const offline = useOnline();
+    if (!offline) {
+        return <div className="offline">You are offline</div>
+    }
+
+
+
+
 
     // if allRestaurants is empty don't render restaurants cards
     if (!allRestaurants) return null;
