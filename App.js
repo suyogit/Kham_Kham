@@ -25,6 +25,12 @@ const AppLayout = () => {
 }
 
 const appRouter = createBrowserRouter([
+
+    {
+        path: "/",
+        element: <Body />,
+    },
+
     {
         path: "/", // show path for routing
         element: <AppLayout />, // show component for particular path
@@ -44,10 +50,7 @@ const appRouter = createBrowserRouter([
                 ]
             },
 
-            {
-                path: "/",
-                element: <Body />,
-            },
+
 
 
 

@@ -10,8 +10,11 @@ import { Link } from "react-router-dom"
 function filterData(searchText, restaurants) {
     const filterData = restaurants.filter((restaurant) =>
 
-        restaurant?.data?.name.toLowerCase().includes(searchText.toLowerCase())
-    //     restaurant?.info?.name.toLowerCase().includes(searchText.toLowerCase())
+        // incase of old api
+        //restaurant?.data?.name.toLowerCase().includes(searchText.toLowerCase())
+
+        // incase of new api
+        restaurant?.info?.name.toLowerCase().includes(searchText.toLowerCase())
     );
     return filterData;
 }
@@ -36,22 +39,29 @@ const Body = () => {
             const data = await fetch(swiggy_api_url);
             const json = await data.json();
            // updated state variable restaurants with Swiggy API data
-            setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-            setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-        //    console.log(json?.data?.cards[2]?.data?.data?.cards)
 
-            // setAllRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-            // setFilteredRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-         //   console.log(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants[0])
+
+            //incase of old api
+            // setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+            // setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+            // console.log(json?.data?.cards[2]?.data?.data?.cards)
+
+
+            //incase of new api
+
+
+            setAllRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+            setFilteredRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        //    console.log(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
         } catch (error) {
             console.log(error);
         }
     }
 
     // use searchData function and set condition if data is empty show error message
-    const searchData = (searchText, restaurants) => {
+    const searchData = (searchText, allRestaurants) => {
         if (searchText !== "") {
-            const data = filterData(searchText, restaurants);
+            const data = filterData(searchText, allRestaurants);
             setFilteredRestaurants(data);
             setErrorMessage("");
             if (data.length === 0) {
@@ -59,7 +69,7 @@ const Body = () => {
             }
         } else {
             setErrorMessage("");
-            setFilteredRestaurants(restaurants);
+            setFilteredRestaurants(allRestaurants);
     }
     };
 
@@ -97,9 +107,20 @@ const Body = () => {
                         {/* We are mapping restaurants array and passing JSON array data to RestaurantCard component as props with unique key as restaurant.data.id */}
                         {filteredRestaurants.map((restaurant) => {
                             return (
-                                <Link to={`/restaurant/${restaurant.data.id}`} key={restaurant.data.id}>
-                                    <RestaurantCard  {...restaurant.data} />
-                                </Link>
+
+                                // incase of old api
+                                // <Link to={`/restaurant/${restaurant.data.id}`} key={restaurant.data.id}>
+                                //     <RestaurantCard  {...restaurant.data} />
+                                // </Link>
+
+                                // incase of new api
+
+                                <Link to={`/restaurant/${restaurant.info.id}`} key={restaurant.info.id}>
+                                    <RestaurantCard  {...restaurant.info} />
+                                </Link> 
+
+
+
                              //   <RestaurantCard key={restaurant.info.id} {...restaurant.info} />
                             );
                         })}
