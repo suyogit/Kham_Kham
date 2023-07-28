@@ -54,9 +54,9 @@ const RestaurantCard = ({
     id
 }) => {
     return (
-        <div className="card">
+        <div className="w-56 p-2 m-2 shadow-lg bg-pink-50">
             <img src={IMG_CDN_URL + cloudinaryImageId} alt="image" />
-            <h3>{name} </h3>
+            <h3 className="font-bold text-xl">{name} </h3>
             <h5>{cuisines.join(", ")}</h5>
             <h5>{areaName}</h5>
             <span>
