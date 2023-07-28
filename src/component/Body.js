@@ -5,20 +5,7 @@ import { useEffect, useState } from "react"; /* This is named export */
 import Shimmer from "./Shimmer"; /* This is default export */
 import { swiggy_api_url } from "../../constant";
 import { Link } from "react-router-dom"
-
-// Filter the restaurant data according input type
-function filterData(searchText, restaurants) {
-    const filterData = restaurants.filter((restaurant) =>
-
-        // incase of old api
-        //restaurant?.data?.name.toLowerCase().includes(searchText.toLowerCase())
-
-        // incase of new api
-        restaurant?.info?.name.toLowerCase().includes(searchText.toLowerCase())
-    );
-    return filterData;
-}
-
+import { filterData } from "../utils/helper";
 // Body Component for body section: It contain all restaurant cards
 const Body = () => {
     // useState: To create a state variable, searchText, allRestaurants and filteredRestaurants is local state variable
