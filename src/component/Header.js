@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom";
+import useOnline from "../utils/useOnline";
 
 //import Logo from "../assets/image/logoimage.png";
 
@@ -16,6 +17,7 @@ const Header = () => {
     // use useState for user logged in or logged out
     const [isLoggedin, setIsLoggedin] = useState(true);
     const navigate = useNavigate();
+    const isonline = useOnline();
     return (
         <div className="header">
             <Title />
@@ -34,6 +36,13 @@ const Header = () => {
                     <li>
                         <i className="fa-solid fa-cart-shopping"></i>
                     </li>
+
+
+
+
+                    <h1>
+                        {isonline ? "🟢" : "⛔"}
+                    </h1>
                     <li>
                         {/* use conditional rendering for login and logout */}
                         {isLoggedin ? (
