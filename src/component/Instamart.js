@@ -8,12 +8,15 @@ const Section = ({ title, description, isVisible, setIsVisible }) => {
         <div className="border border-black p-2 m-2">
             <h3 className="font-bold text-xl">{title}</h3>
             {isVisible ? (
+                <div>
                 <button
                     onClick={() => setIsVisible()}
                     className="cursor-pointer underline"
                 >
                     Hide
                 </button>
+                    <p>{description}</p>
+                </div>
             ) : (
                 <button
                         onClick={() => setIsVisible()}
@@ -23,20 +26,15 @@ const Section = ({ title, description, isVisible, setIsVisible }) => {
                 </button>
             )}
 
-            {isVisible && <p>{description}</p>}
+
         </div>
     );
 };
 
 const Instamart = () => {
 
-    const [sectionConfig, setSectionConfig] = useState({
-        showAbout: true,
-        showTeam: false,
-        showCareers: false,
+    const [visibleSection, setIsVisibleSection] = useState("about") 
 
-    }
-    )
 
     return (
         <div>
@@ -46,15 +44,11 @@ const Instamart = () => {
                 description={
                     " we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
                 }
-                isVisible={sectionConfig.showAbout}
-                setIsVisible={() => (
-                    setSectionConfig({
-                        showAbout: true,
-                        showTeam: false,
-                        showCareers: false,
+                isVisible={visibleSection === "about"}//isVisible controls whether it is visible or not
+                setIsVisible={() => (//setIsVisible controls what us visible
+                    setIsVisibleSection(visibleSection === "about" ? "" : "about"))
 
 
-                    }))
                 }
 
 
@@ -65,14 +59,9 @@ const Instamart = () => {
                 description={
                     "we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
                 }
-                isVisible={sectionConfig.showTeam}
+                isVisible={visibleSection === "team"}
                 setIsVisible={() => (
-                    setSectionConfig({
-                        showAbout: false,
-                        showTeam: true,
-                        showCareers: false,
-
-                    }))
+                    setIsVisibleSection(visibleSection === "team" ? "" : "team"))
                 }
 
 
@@ -83,14 +72,9 @@ const Instamart = () => {
                 description={
                     "we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
                 }
-                isVisible={sectionConfig.showCareers}
+                isVisible={visibleSection === "career"}
                 setIsVisible={() => (
-                    setSectionConfig({
-                        showAbout: false,
-                        showTeam: false,
-                        showCareers: true,
-
-                    }))
+                    setIsVisibleSection(visibleSection === "career" ? "" : "career"))
                 }
 
 
