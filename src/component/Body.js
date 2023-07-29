@@ -11,7 +11,7 @@ import useOnline from "../utils/useOnline";
 
 
 // Body Component for body section: It contain all restaurant cards
-const Body = ({ user }) => {
+const Body = () => {
     // useState: To create a state variable, searchText, allRestaurants and filteredRestaurants is local state variable
     const [searchText, setSearchText] = useState("");
     const [allRestaurants, setAllRestaurants] = useState([]);
@@ -117,7 +117,7 @@ const Body = ({ user }) => {
                                 // incase of new api
 
                                 <Link to={`/restaurant/${restaurant.info.id}`} key={restaurant.info.id}>
-                                    <RestaurantCard  {...restaurant.info} user={user} />
+                                    <RestaurantCard  {...restaurant.info} />
                                 </Link> 
 
 

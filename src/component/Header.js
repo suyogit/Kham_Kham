@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom";
 import useOnline from "../utils/useOnline";
+import UserContext from "../utils/userContext";
 
 //import Logo from "../assets/image/logoimage.png";
 
@@ -18,6 +19,7 @@ const Header = () => {
     const [isLoggedin, setIsLoggedin] = useState(true);
     const navigate = useNavigate();
     const isonline = useOnline();
+    const { user } = useContext(UserContext);
 
 
 
@@ -49,6 +51,7 @@ const Header = () => {
                     <h1>
                         {isonline ? "🟢" : "⛔"}
                     </h1>
+                    <span className="p-3 font-bold text-black-900">{user.name}</span>
                     <li>
                         {/* use conditional rendering for login and logout */}
                         {isLoggedin ? (

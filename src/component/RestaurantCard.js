@@ -1,4 +1,6 @@
 import { IMG_CDN_URL } from '../../constant.js'
+import UserContext from '../utils/userContext.js';
+import { useContext } from 'react';
 
 
 //ols api working code
@@ -52,8 +54,11 @@ const RestaurantCard = ({
     costForTwo,
     avgRating,
     id,
-    user
+
 }) => {
+
+    const {user}= useContext(UserContext);
+
     return (
         <div className="card">
             <img src={IMG_CDN_URL + cloudinaryImageId} alt="image" />
@@ -77,7 +82,9 @@ const RestaurantCard = ({
                 <h4>{id}</h4>
                 <h4>•</h4>
                 <h4>{costForTwo}</h4>
-                <h4>{user.name}</h4>
+                <h4 className="font-bold">{user.name}</h4>
+
+
             </span>
         </div>
     );

@@ -26,8 +26,8 @@
 
 
 import ProfileClass from "./ProfileClass";
-
 import React, { Component } from 'react'
+import UserContext from '../utils/userContext.js';
 
 export default class About extends Component {
 
@@ -44,15 +44,31 @@ export default class About extends Component {
 
     render() {
 
+
         console.log("render parent")
 
 
     return (
         <div className="about-container">
             <div className="about-left">
+
                 <h1>
                     Welcome to <br /> The world of <br /> <span>Tasty & Fresh Food</span>
                 </h1>
+                {/* <UserContext.Consumer>
+
+                    {
+                        ({ user }) => (
+                            <h1>
+                                {/* // <h1 className="font-bold text-sm p-2"> */}
+
+                {/* {user.name}-{user.email}
+                            </h1>
+
+
+                        )
+                    }
+                </UserContext.Consumer> */} */}
                 <h4>
                     "Better you will feel if you eat a Kham<span>Kham</span> healthy meal"
                 </h4>
