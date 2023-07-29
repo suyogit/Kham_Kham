@@ -11,7 +11,7 @@ import useOnline from "../utils/useOnline";
 
 
 // Body Component for body section: It contain all restaurant cards
-const Body = () => {
+const Body = ({ user }) => {
     // useState: To create a state variable, searchText, allRestaurants and filteredRestaurants is local state variable
     const [searchText, setSearchText] = useState("");
     const [allRestaurants, setAllRestaurants] = useState([]);
@@ -43,7 +43,7 @@ const Body = () => {
 
             setAllRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
             setFilteredRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        //    console.log(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+            console.log(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
         } catch (error) {
             console.log(error);
         }
@@ -117,7 +117,7 @@ const Body = () => {
                                 // incase of new api
 
                                 <Link to={`/restaurant/${restaurant.info.id}`} key={restaurant.info.id}>
-                                    <RestaurantCard  {...restaurant.info} />
+                                    <RestaurantCard  {...restaurant.info} user={user} />
                                 </Link> 
 
 

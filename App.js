@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import ReactDOM, { createRoot } from 'react-dom/client';
 import Header from './src/component/Header';
 import Footer from './src/component/Footer';
@@ -16,7 +16,10 @@ const About = lazy(() => import('./src/component/About'));
 
 const AppLayout = () => {
 
-
+    // const [user, setUser] = useState({
+    //     name: "suyog",
+    //     email: "asuyog@gmail.com"
+    // })
 
     return (
         <>
@@ -55,7 +58,10 @@ const appRouter = createBrowserRouter([
 
             {
                 path: "/",
-                element: <Body />,
+                element: <Body user={{
+                    name: "suyog",
+                    email: "asuyog@gmail.com"
+                }} />,
             },
 
             {

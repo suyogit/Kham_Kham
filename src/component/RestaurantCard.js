@@ -51,7 +51,8 @@ const RestaurantCard = ({
     lastMileTravel,
     costForTwo,
     avgRating,
-    id
+    id,
+    user
 }) => {
     return (
         <div className="card">
@@ -76,6 +77,7 @@ const RestaurantCard = ({
                 <h4>{id}</h4>
                 <h4>•</h4>
                 <h4>{costForTwo}</h4>
+                <h4>{user.name}</h4>
             </span>
         </div>
     );
