@@ -11,6 +11,7 @@ import RestrauntMenu from './src/component/RestrauntMenu';
 import Login from './src/component/Login';
 import Profile from './src/component/Profile';
 import Shimmer from './src/component/Shimmer';
+import Instamart from './src/component/Instamart';
 
 const About = lazy(() => import('./src/component/About'));
 
@@ -75,6 +76,10 @@ const appRouter = createBrowserRouter([
             {
                 path: "/login",
                 element: <Login />,
+            },
+            {
+                path: "/instamart",
+                element: <Instamart />,
             },
 
         ],
