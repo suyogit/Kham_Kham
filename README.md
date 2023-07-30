@@ -59,8 +59,8 @@ At **Kham_Kham**, I believe in building connections. Reach out to me through the
 Experience the convenience of logging in and out, giving you complete control over your journey through **Kham_Kham**. Feel free to explore the app both as an authenticated user and a carefree wanderer.
 
 
-##Output:
-![websiteJPG](https://github.com/suyogit/Kham_Kham/assets/84793115/c2551676-690d-4e64-b950-0741cde50be1)
+## Output:
+![websiteJPG](https://github.com/suyogit/Kham_Kham/assets/84793115/f64d0780-6469-406d-9e47-22724a0cac24)
 
 ## Note
 
