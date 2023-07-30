@@ -46,7 +46,7 @@ const Header = () => {
                         <Link to="/instamart">Instamart</Link>
                     </li>
                     <li>
-                        <i className="fa-solid fa-cart-shopping">-{cartItems.length}</i>
+                        <Link to="/cart"><i className="fa-solid fa-cart-shopping">-{cartItems.length}</i></Link>
                     </li>
 
 

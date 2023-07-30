@@ -15,13 +15,14 @@ import Instamart from './src/component/Instamart';
 import UserContext from './src/utils/userContext';
 import { Provider } from 'react-redux';
 import store from './src/utils/store';
+import Cart from './src/component/Cart';
 const About = lazy(() => import('./src/component/About'));
 
 const AppLayout = () => {
 
     //assume this data we are getting is after api call in useEffect
     const [user, setUser] = useState({
-        name: "suyog",
+        name: "Suyog",
         email: "asuyog@gmail.com"
     })
 
@@ -86,6 +87,10 @@ const appRouter = createBrowserRouter([
             {
                 path: "/instamart",
                 element: <Instamart />,
+            },
+            {
+                path: "/cart",
+                element: <Cart />,
             },
 
         ],
