@@ -5,13 +5,19 @@ import { IMG_CDN_URL, swiggy_menu_api_URL, MENU_ITEM_TYPE_KEY, RESTAURANT_TYPE_K
 import Shimmer from './Shimmer';
 import { MenuShimmer } from './Shimmer';
 import useRestaurant from '../utils/useRestaurant';
-
+import { useDispatch } from 'react-redux';
+import { addItem } from '../utils/cartslice';
 
 
 const RestrauntMenu = () => {
 
     const { resId } = useParams();
     const { restaurant, menuItems } = useRestaurant(resId);
+    const dispatch = useDispatch();
+
+    const handleAddItems = () => {
+        dispatch(addItem("momo"))
+    }
 
 
 
@@ -97,7 +103,7 @@ const RestrauntMenu = () => {
                                             alt={item?.name}
                                         />
                                     )}
-                                    <button className="add-btn"> ADD +</button>
+                                    <button className="add-btn" onClick={() => handleAddItems()}> ADD +</button>
                                 </div>
                             </div>
                         ))}
