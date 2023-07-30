@@ -99,7 +99,7 @@ const Body = () => {
                     Search
                 </button>
 
-                <input
+                {/* <input
                     type="text"
 
 
@@ -120,7 +120,7 @@ const Body = () => {
 
                 >
                     Search
-                </button>
+                </button> */}
 
 
             </div>

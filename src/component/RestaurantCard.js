@@ -50,7 +50,7 @@ const RestaurantCard = ({
     name,
     cuisines,
     areaName,
-    lastMileTravel,
+    type,
     costForTwo,
     avgRating,
     id,
@@ -82,7 +82,8 @@ const RestaurantCard = ({
                 <h4>{id}</h4>
                 <h4>•</h4>
                 <h4>{costForTwo}</h4>
-                <h4 className="font-bold">{user.name}</h4>
+                <h4>{type}</h4>
+                {/* <h4 className="font-bold">{user.name}</h4> */}
 
 
             </span>
