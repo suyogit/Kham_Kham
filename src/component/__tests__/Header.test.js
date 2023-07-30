@@ -7,20 +7,41 @@ import { StaticRouter } from 'react-router-dom/server';
 
 
 
-test("Logo should be rendered", () => {
+// test("Logo should be rendered", () => {
+//     const header = render(
+//         <StaticRouter>
+//             <Provider store={store}>
+
+//                 <Header />
+
+//             </Provider>
+//         </StaticRouter>
+//     );
+
+//testing header
+// const logo = header.getAllByTestId("logo");
+
+
+// console.log(logo[0]);
+// expect(logo[0].src).toBe("http://localhost/dummy.png")
+
+
+
+// })
+
+
+
+test("Online Status should be green on rendering header", () => {
+    // Load Header
     const header = render(
         <StaticRouter>
             <Provider store={store}>
-
                 <Header />
-
             </Provider>
         </StaticRouter>
     );
-    const logo = header.getAllByTestId("logo");
 
+    const onlineStatus = header.getByTestId("online-status");
 
-    console.log(logo[0]);
-    expect(logo[0].src).toBe("http://localhost/dummy.png")
-})
-
+    expect(onlineStatus.innerHTML).toBe("🟢");
+});

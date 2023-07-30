@@ -6,14 +6,14 @@ import UserContext from "../utils/userContext";
 import { useSelector } from "react-redux";
 import store from "../utils/store";
 
-import Logo from "../assets/image/logoimage.png";
+// import Logo from "../assets/image/logoimage.png";
 
 
 const Title = () =>
 (
     <a href="/">
-        <img className="logo" data-testid="logo" src={Logo} alt="logo" />
-        {/* <img className="logo" src="https://wpengine-myanmore.s3.amazonaws.com/uploads/sabai/File/files/l_0061ba35cbab10619bc12c6148509cd1.jpg" alt="logo" /> */}
+        {/* <img className="logo" data-testid="logo" src={Logo} alt="logo" /> */}
+        <img className="logo" src="https://wpengine-myanmore.s3.amazonaws.com/uploads/sabai/File/files/l_0061ba35cbab10619bc12c6148509cd1.jpg" alt="logo" />
     </a>
 );
 // Header component for header section: Logo, Nav Items
@@ -53,7 +53,7 @@ const Header = () => {
 
 
 
-                    <h1>
+                    <h1 data-testid="status-online">
                         {isonline ? "🟢" : "⛔"}
                     </h1>
                     <span className="p-3 font-bold text-black-900">{user.name}</span>
