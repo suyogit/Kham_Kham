@@ -9,14 +9,15 @@ To begin this mouthwatering journey, follow these simple steps:
 ### 1. Clone the Repository
 
 Start by cloning the repository using the following command:
-git clone https://github.com/suyogit/Kham_Kham.git
+## git clone https://github.com/suyogit/Kham_Kham.git
 
 
 
 ### 2. Install Dependencies
 
 Once you have the code on your machine, run the following command to install all the required dependencies:
-npm install
+
+## npm install
 
 
 
@@ -27,7 +28,8 @@ For seamless data access, make sure to install the CORS extension from your web 
 ### 4. Start the Adventure
 
 You are all set! Run the command below to launch the app and immerse yourself in the delightful experience:
-npm start
+
+## npm start
 
 
 
@@ -51,9 +53,14 @@ Indulge in your virtual food adventure and explore our cart option. Dive into th
 
 At **Kham_Kham**, I believe in building connections. Reach out to me through the Contact Us page and share your delightful experiences or feedback. Additionally, my web app boasts an online and offline status feature, ensuring you're never out of touch.
 
+
 ### A Taste of Login and Logout 💻
 
 Experience the convenience of logging in and out, giving you complete control over your journey through **Kham_Kham**. Feel free to explore the app both as an authenticated user and a carefree wanderer.
+
+
+##Output:
+![websiteJPG](https://github.com/suyogit/Kham_Kham/assets/84793115/c2551676-690d-4e64-b950-0741cde50be1)
 
 ## Note
 
