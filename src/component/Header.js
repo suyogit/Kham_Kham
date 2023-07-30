@@ -3,6 +3,8 @@ import { Link } from "react-router-dom"
 import { useNavigate } from "react-router-dom";
 import useOnline from "../utils/useOnline";
 import UserContext from "../utils/userContext";
+import { useSelector } from "react-redux";
+import store from "../utils/store";
 
 //import Logo from "../assets/image/logoimage.png";
 
@@ -20,6 +22,7 @@ const Header = () => {
     const navigate = useNavigate();
     const isonline = useOnline();
     const { user } = useContext(UserContext);
+    const cartItems = useSelector(store => store.cart.items);
 
 
 
@@ -42,7 +45,7 @@ const Header = () => {
                         <Link to="/instamart">Instamart</Link>
                     </li>
                     <li>
-                        <i className="fa-solid fa-cart-shopping"></i>
+                        <i className="fa-solid fa-cart-shopping">-{cartItems.length}</i>
                     </li>
 
 
