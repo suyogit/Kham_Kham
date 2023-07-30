@@ -1,14 +1,14 @@
 
 
 import RestaurantCard from "./RestaurantCard";
-import { useEffect, useState } from "react"; /* This is named export */
+import { useEffect, useState, useContext } from "react"; /* This is named export */
 import Shimmer from "./Shimmer"; /* This is default export */
 import { swiggy_api_url } from "../../constant";
 import { Link } from "react-router-dom"
 import { filterData } from "../utils/helper";
 
 import useOnline from "../utils/useOnline";
-
+import UserContext from "../utils/userContext";
 
 // Body Component for body section: It contain all restaurant cards
 const Body = () => {
@@ -17,6 +17,7 @@ const Body = () => {
     const [allRestaurants, setAllRestaurants] = useState([]);
     const [filteredRestaurants, setFilteredRestaurants] = useState([]);
     const [errorMessage, setErrorMessage] = useState("");
+    const { user, setUser } = useContext(UserContext);
 
   // use useEffect for one time call getRestaurants using empty dependency array
     useEffect(() => {
@@ -97,6 +98,31 @@ const Body = () => {
                 >
                     Search
                 </button>
+
+                <input
+                    type="text"
+
+
+                    value={user.name}
+                    // update the state variable searchText when we typing in input box
+                    onChange={(e) => setUser(
+                        {
+                            name: e.target.value,
+                            email: user.email
+
+                        }
+                    )}
+
+
+                ></input>
+                <button
+
+
+                >
+                    Search
+                </button>
+
+
             </div>
             {errorMessage && <div className="error-container">{errorMessage}</div>}
 

@@ -59,16 +59,16 @@ export default class About extends Component {
 
                     {
                         ({ user }) => (
-                            <h1>
+                            <h1> */}
                                 {/* // <h1 className="font-bold text-sm p-2"> */}
-
-                {/* {user.name}-{user.email}
+                {/*
+                                {user.name}-{user.email}
                             </h1>
 
 
                         )
                     }
-                </UserContext.Consumer> */} */}
+                </UserContext.Consumer> */}
                 <h4>
                     "Better you will feel if you eat a Kham<span>Kham</span> healthy meal"
                 </h4>

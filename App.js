@@ -12,21 +12,29 @@ import Login from './src/component/Login';
 import Profile from './src/component/Profile';
 import Shimmer from './src/component/Shimmer';
 import Instamart from './src/component/Instamart';
+import UserContext from './src/utils/userContext';
 
 const About = lazy(() => import('./src/component/About'));
 
 const AppLayout = () => {
 
-    // const [user, setUser] = useState({
-    //     name: "suyog",
-    //     email: "asuyog@gmail.com"
-    // })
+    //assume this data we are getting is after api call in useEffect
+    const [user, setUser] = useState({
+        name: "suyog",
+        email: "asuyog@gmail.com"
+    })
 
     return (
         <>
+            <UserContext.Provider value={
+                {
+                    user: user,
+                    setUser: setUser
+                }}>
             <Header />
             <Outlet />
             <Footer />
+            </UserContext.Provider>
         </>
     )
 }
